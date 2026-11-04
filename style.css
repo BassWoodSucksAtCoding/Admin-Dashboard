@@ -1,0 +1,23 @@
+#content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar cards";
+}
+
+#sidebar {
+    background-color: #2B5748;
+    grid-area: sidebar;
+}
+
+#header {
+    background-color: #618764;
+    grid-area: header;
+}
+
+#cards {
+    background-color: #9CB080;
+    grid-area: cards;
+}
