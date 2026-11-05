@@ -1,3 +1,16 @@
+
+.outfit-card {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+* {
+    font-family: "Outfit", sans-serif;
+}
+
 #content {
     text-align: center;
 
@@ -26,10 +39,12 @@
 
 .card {
     height: 170px;
-    background-color: #252525;
     position: relative;
-    color: white;
     text-align: left;
+
+    color: white;
+    background-color: #252525;
+    box-shadow: 2px 4px 2px rgb(20, 20, 20);
     
     border-left: 0.8em solid rebeccapurple;
     border-radius: 10px;
