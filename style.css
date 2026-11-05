@@ -1,4 +1,6 @@
 #content {
+    text-align: center;
+
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
@@ -23,13 +25,14 @@
 }
 
 .card {
-    width: 300px;
     height: 170px;
     background-color: #393E46;
     border-radius: 10px;
 
     padding-top: 20px;
     padding-left: 20px;
+
+    margin: 20px;
 }
 
 #bottom-bar {
@@ -39,7 +42,8 @@
 }
 
 #cards > div {
-    display: flex;
+    display: grid;
+    gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
 }
