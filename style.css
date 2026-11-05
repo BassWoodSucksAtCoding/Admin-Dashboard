@@ -23,12 +23,16 @@
     text-align: left;
 }
 
+img {
+    filter: var(--white-svg);
+}
+
 #content {
     text-align: center;
     height: 100vh;
 
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(250px,1fr) 4fr;
     grid-template-areas: 
     "sidebar main"
 }
@@ -51,18 +55,27 @@
 
 #sidebar > div {
     padding: 10px;
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 
 li{
     display: flex;
     gap:10px;
     font-weight: bold;
+
+    align-items: center;
+}
+
+ul {
+    display: grid;
+    gap:10px;
 }
 
 
 .sidebar-icons {
-    filter: var(--white-svg)
+    filter: var(--white-svg);
+    width: 20px;
+    height: 20px;
 }
 
 #header {
@@ -85,7 +98,6 @@ li{
 
 #header > #top-left > img{
     margin-right: 20px;
-    filter: var(--white-svg);
 }
 
 input {
