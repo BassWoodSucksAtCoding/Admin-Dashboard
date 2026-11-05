@@ -78,7 +78,8 @@ input {
 }
 
 input:focus{
-    outline: 1px solid blue;
+    outline: 3px solid var(--dark-primary-color);
+    text-indent: 5px;
 }
 
 #buttons {
