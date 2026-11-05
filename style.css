@@ -1,4 +1,9 @@
 
+:root {
+  --secondary-color: rgb(113, 187, 78);
+  --dark-secondary-color: rgb(92, 150, 65);
+}
+
 .outfit-card {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -9,6 +14,8 @@
 
 * {
     font-family: "Outfit", sans-serif;
+    color: white;
+    text-align: left;
 }
 
 #content {
@@ -30,28 +37,55 @@
 #header {
     background-color: #252525;
     grid-area: header;
+
+    padding: 0px 40px;
+}
+
+#buttons {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, minmax(25px, 1fr));
+}
+
+#buttons > button{
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 50px;
+
+    width: 80px;
+    height: 2em;
+
+    font-size: 15px;
+    text-align: center;
+}
+
+#buttons > button:hover {
+    background-color: var(--dark-secondary-color);
+    cursor: pointer;
 }
 
 #cards {
     background-color: #181818;
+
+    padding:20px;
+
     grid-area: cards;
 }
 
 .card {
     height: 170px;
     position: relative;
-    text-align: left;
 
-    color: white;
     background-color: #252525;
     box-shadow: 2px 4px 2px rgb(20, 20, 20);
     
-    border-left: 0.8em solid rebeccapurple;
+    border-left: 0.8em solid var(--secondary-color);
     border-radius: 10px;
 
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 20px;
     margin: 20px;
+    margin-left: 0px;
 }
 
 #bottom-bar {
@@ -64,5 +98,4 @@
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
 }
