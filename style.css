@@ -2,6 +2,9 @@
 :root {
   --secondary-color: rgb(113, 187, 78);
   --dark-secondary-color: rgb(92, 150, 65);
+
+  --primary-color: #252525;
+  --dark-primary-color: #181818;
 }
 
 .outfit-card {
@@ -43,7 +46,7 @@
 }
 
 #header {
-    background-color: #252525;
+    background-color: var(--primary-color);
 
     grid-area: header;
     display: grid;
@@ -55,12 +58,27 @@
     padding: 0px 40px;
 }
 
+#header > #top-left{
+    display: flex;
+    align-items: center;
+}
+
+#header > #top-left > img{
+    margin-right: 20px;
+}
+
 input {
     background-color: #3f3f3f;
     border: none;
     border-radius: 50px;
 
-    width: 1fr;
+    width: calc(100% - 80px);
+    margin: 0px 40px;
+    padding-right: 10px;
+}
+
+input:focus{
+    outline: 1px solid blue;
 }
 
 #buttons {
