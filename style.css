@@ -53,6 +53,8 @@ img {
     padding: 20px;
 }
 
+
+
 #sidebar > div {
     padding: 10px;
     margin: 20px 0px;
@@ -66,6 +68,10 @@ li{
     font-size: 21px;
 
     align-items: center;
+}
+
+li > p:hover {
+    cursor: pointer;
 }
 
 ul {
@@ -180,6 +186,10 @@ input:focus{
     gap:20px;
 
     align-self: flex-end;
+}
+
+.card-icon > img:hover {
+    cursor: pointer;
 }
 
 #bottom-bar {
