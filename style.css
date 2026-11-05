@@ -1,7 +1,7 @@
 
 :root {
-  --secondary-color: rgb(113, 187, 78);
-  --dark-secondary-color: rgb(92, 150, 65);
+  --secondary-color: #63944c;
+  --dark-secondary-color: #486d37;
 
   --primary-color: #252525;
   --dark-primary-color: #181818;
@@ -41,7 +41,7 @@
 }
 
 #sidebar {
-    background-color: #2B5748;
+    background-color: var(--secondary-color);
     grid-area: sidebar;
 }
 
