@@ -45,6 +45,14 @@
     grid-area: sidebar;
 }
 
+li{
+    display: flex;
+}
+
+.sidebar-icons {
+    filter: invert(100%) sepia(8%) saturate(32%) hue-rotate(332deg) brightness(108%) contrast(107%);
+}
+
 #header {
     background-color: var(--primary-color);
 
