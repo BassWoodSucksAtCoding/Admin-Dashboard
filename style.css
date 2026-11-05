@@ -15,23 +15,27 @@
 }
 
 #header {
-    background-color: #393E46;
+    background-color: #252525;
     grid-area: header;
 }
 
 #cards {
-    background-color: #222831;
+    background-color: #181818;
     grid-area: cards;
 }
 
 .card {
     height: 170px;
-    background-color: #393E46;
+    background-color: #252525;
+    position: relative;
+    color: white;
+    text-align: left;
+    
+    border-left: 0.8em solid rebeccapurple;
     border-radius: 10px;
 
     padding-top: 20px;
     padding-left: 20px;
-
     margin: 20px;
 }
 
