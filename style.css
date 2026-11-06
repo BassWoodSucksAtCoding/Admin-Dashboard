@@ -23,7 +23,7 @@
     text-align: left;
 }
 
-img {
+img[src$=".svg"]  {
     filter: var(--white-svg);
 }
 
@@ -70,8 +70,8 @@ li{
     align-items: center;
 }
 
-li > p:hover {
-    cursor: pointer;
+li > a {
+    text-decoration: none;
 }
 
 ul {
@@ -99,9 +99,27 @@ ul {
     padding: 0px 40px;
 }
 
+#header > #top-right,
+#header > #bottom-left,
 #header > #top-left{
     display: flex;
     align-items: center;
+}
+
+#top-right,
+#bottom-left {
+    gap: 10px;
+}
+
+#top-right > img,
+#bottom-left > img{
+    border-radius: 50px;
+}
+
+#top-right {
+    font-size: 18px;
+    justify-content: flex-end;
+    margin: 0px 40px;
 }
 
 #header > #top-left > img{
