@@ -2,6 +2,8 @@ const myLibrary = [];
 const card = document.querySelector('#progenitor-card');
 const cardDiv = document.querySelector('#cardsDiv');
 
+const dialogSubmit = document.querySelector("#dialogSubmit")
+
 function Book(name, description) {
     this.name = name;
     this.description = description;
@@ -27,6 +29,21 @@ function displayBook(name, description) {
 }
 
 const newButton = document.querySelector("#New");
+
+dialogSubmit.addEventListener('click', event => {
+    event.preventDefault();
+    const form = document.querySelector("#dialogForm");
+
+    const name = form.elements["name"].value;
+    const desc = form.elements["desc"].value;
+    const author = form.elements["author"].value;
+    const pageno = form.elements["page-no"].value;
+
+    addBookToLibrary(name, desc);
+    
+    const dialog = document.querySelector("dialog");
+    dialog.close();
+})
 
 // newButton.addEventListener('click', (event) => {
 //     const dialog = document.createElement('dialog');
