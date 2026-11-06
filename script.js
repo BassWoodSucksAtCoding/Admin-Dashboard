@@ -45,10 +45,12 @@ dialogSubmit.addEventListener('click', event => {
     const author = form.elements["author"].value;
     const pageno = form.elements["page-no"].value;
 
-    addBookToLibrary(name, desc, author, pageno);
+    if (!(name === "" || desc === "" || author === "" || pageno === "")) {
+        addBookToLibrary(name, desc, author, pageno);
     
-    const dialog = document.querySelector("dialog");
-    dialog.close();
+        const dialog = document.querySelector("dialog");
+        dialog.close();
+    }    
 })
 
 addBookToLibrary(
@@ -57,3 +59,9 @@ addBookToLibrary(
     "BassWood",
     "3000"
 )
+
+const save = document.querySelector('#save'); 
+
+save.addEventListener('click', event => { 
+  save.src = 'Images/trash-can-outline.svg'; 
+});
