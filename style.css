@@ -7,6 +7,8 @@
   --dark-primary-color: #181818;
 
   --white-svg: invert(100%) sepia(8%) saturate(32%) hue-rotate(332deg) brightness(108%) contrast(107%);
+
+  --box-shadow: 4px 4px 10px rgb(15, 15, 15);
 }
 
 .outfit-card {
@@ -51,6 +53,8 @@ img[src$=".svg"]  {
     grid-area: sidebar;
 
     padding: 20px;
+
+    box-shadow: var(--box-shadow);
 }
 
 
@@ -97,6 +101,7 @@ ul {
     align-items: center;
 
     padding: 0px 40px;
+
 }
 
 #header > #top-right,
@@ -176,7 +181,7 @@ input:focus{
     height: 190px;
 
     background-color: var(--primary-color);
-    box-shadow: 2px 4px 2px rgb(20, 20, 20);
+    box-shadow: var(--box-shadow);
     
     border-left: 0.8em solid var(--secondary-color);
     border-radius: 10px;
