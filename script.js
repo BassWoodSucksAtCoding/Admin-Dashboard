@@ -51,10 +51,9 @@ dialogSubmit.addEventListener('click', event => {
     dialog.close();
 })
 
-// newButton.addEventListener('click', (event) => {
-//     const dialog = document.createElement('dialog');
-//     dialog.id = "my-dialog"
-//     document.body.appendChild(dialog);    
-// });
-
-// addBookToLibrary("Test","This is a test book to ensure it works correctly!")
+addBookToLibrary(
+    "Template Book",
+    "A template for how the books look like! Press the new button at the bottom right corner of the header to add more books!",
+    "BassWood",
+    "3000"
+)
