@@ -1,0 +1,31 @@
+const myLibrary = [];
+const card = document.querySelector('#progenitor-card');
+const cardDiv = document.querySelector('#cardsDiv');
+
+function Book(name, description) {
+    this.name = name;
+    this.description = description;
+}
+
+function addBookToLibrary(name, description) {
+    newBook = new Book(name, description);
+    myLibrary.push(newBook);
+    console.log(myLibrary);
+
+    const clonedCard = card.cloneNode(true);
+    clonedCard.id = null;
+    cardDiv.appendChild(clonedCard);
+
+    const title = clonedCard.querySelector('h4');
+    title.textContent = name;
+
+    const desc = clonedCard.querySelector('p');
+    desc.textContent = description;
+}
+
+const newButton = document.querySelector("#New");
+
+newButton.addEventListener('click', (event) => {
+    addBookToLibrary("Test","This is a test book to ensure it works correctly!")
+});
+
