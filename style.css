@@ -204,6 +204,7 @@ input:focus{
 }
 
 .card-text > p {
+    margin-top: 5px;
     font-size: 12px;
 }
 
