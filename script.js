@@ -28,7 +28,10 @@ function displayBook(name, description) {
 
 const newButton = document.querySelector("#New");
 
-newButton.addEventListener('click', (event) => {
-    addBookToLibrary("Test","This is a test book to ensure it works correctly!")
-});
+// newButton.addEventListener('click', (event) => {
+//     const dialog = document.createElement('dialog');
+//     dialog.id = "my-dialog"
+//     document.body.appendChild(dialog);    
+// });
 
+// addBookToLibrary("Test","This is a test book to ensure it works correctly!")

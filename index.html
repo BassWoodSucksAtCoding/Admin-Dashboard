@@ -97,9 +97,43 @@
                 </div>
 
                 <div id="buttons">
-                    <button id="New">New</button>
+                    <button command="show-modal" commandfor="my-dialog" id="New">New</button>
                     <button>Upload</button>
                     <button>Share</button>
+
+                    <dialog id="my-dialog">
+                        <div>
+                            <h2>Add new book to the library.</h2>
+                        </div>
+                        
+
+                        <form>
+                            <div>
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+
+                            <div>
+                                <label for="author">Author:</label>
+                                <input type="text" id="author" name="author">
+                            </div>
+
+                            <div>
+                                <label for="page-no">Number of Pages:</label>
+                                <input type="tel" id="page-no" name="page-no">
+                            </div>
+
+                            <div>
+                                <label for="desc">Description:</label>
+                                <textarea id="desc" name="desc" rows="50" cols="4"> </textarea>
+                            </div>
+
+                            <div id="dialogButtons">
+                                <button type="submit" id="dialogSubmit">Submit</button>
+                                <button commandfor="my-dialog" command="close" id="dialogClose" type="button">Close</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </div>
             </div>
 
