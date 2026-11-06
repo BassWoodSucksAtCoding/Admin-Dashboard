@@ -5,13 +5,16 @@ const cardDiv = document.querySelector('#cardsDiv');
 function Book(name, description) {
     this.name = name;
     this.description = description;
+    this.id = crypto.randomUUID();
 }
 
 function addBookToLibrary(name, description) {
     newBook = new Book(name, description);
     myLibrary.push(newBook);
-    console.log(myLibrary);
+    displayBook(name, description);
+}
 
+function displayBook(name, description) {
     const clonedCard = card.cloneNode(true);
     clonedCard.id = null;
     cardDiv.appendChild(clonedCard);
