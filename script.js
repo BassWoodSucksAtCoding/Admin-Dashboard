@@ -19,7 +19,6 @@ function addBookToLibrary(name, description, author, pageno) {
 }
 
 function displayBook(book) {
-    
     const clonedCard = card.cloneNode(true);
     clonedCard.id = null;
     clonedCard.dataset.bookID = book.id
@@ -40,6 +39,13 @@ function displayBook(book) {
 
     const pageNo = clonedCard.querySelector('h6');
     pageNo.textContent = `Number of pages: ${book.pageno}`
+    
+    deleteButton.addEventListener('click', event => {
+        const clickedButton = event.currentTarget
+        const bookList = document.querySelector(`[data-book-i-d = "${clickedButton.dataset.buttonID}"]`);
+        bookList.remove();
+    })
+
 }
 
 const newButton = document.querySelector("#New");
@@ -67,17 +73,3 @@ addBookToLibrary(
     "BassWood",
     "3000"
 )
-
-const deleteButton = document.querySelectorAll('.delete'); 
-console.log(deleteButton)
-
-for (const button of deleteButton) {
-    button.addEventListener('click', event => {
-        const clickedButton = event.currentTarget
-        console.log("hi")
-        const bookList = document.querySelector(`[data-book-i-d = "${clickedButton.dataset.buttonID}"]`);
-        console.log("hi")
-        console.log(bookList)
-        bookList.remove();
-    })
-}
