@@ -4,34 +4,36 @@ const cardDiv = document.querySelector('#cardsDiv');
 
 const dialogSubmit = document.querySelector("#dialogSubmit")
 
-function Book(name, description) {
+function Book(name, description, author, pageno) {
     this.name = name;
     this.description = description;
     this.id = crypto.randomUUID();
+    this.author = author
+    this.pageno = pageno
 }
 
 function addBookToLibrary(name, description, author, pageno) {
-    newBook = new Book(name, description);
+    newBook = new Book(name, description, author, pageno);
     myLibrary.push(newBook);
-    displayBook(name, description, author, pageno);
+    displayBook(newBook);
 }
 
-function displayBook(name, description, author, pageno) {
+function displayBook(book) {
     const clonedCard = card.cloneNode(true);
     clonedCard.id = null;
     cardDiv.appendChild(clonedCard);
 
     const title = clonedCard.querySelector('h4');
-    title.textContent = name;
+    title.textContent = book.name;
 
     const desc = clonedCard.querySelector('p');
-    desc.textContent = description;
+    desc.textContent = book.description;
 
     const authorName = clonedCard.querySelector('h5');
-    authorName.textContent = `By: ${author}`
+    authorName.textContent = `By: ${book.author}`
 
     const pageNo = clonedCard.querySelector('h6');
-    pageNo.textContent = `Number of pages: ${pageno}`
+    pageNo.textContent = `Number of pages: ${book.pageno}`
 }
 
 const newButton = document.querySelector("#New");
