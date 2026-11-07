@@ -226,15 +226,15 @@ input:focus{
     cursor: pointer;
 }
 
-#delete:hover {
+.delete:hover {
     filter: invert(24%) sepia(13%) saturate(3627%) hue-rotate(317deg) brightness(90%) contrast(96%);
 }
 
-#read:hover {
+.read:hover {
     filter: invert(53%) sepia(38%) saturate(496%) hue-rotate(57deg) brightness(92%) contrast(91%);
 }
 
-#save:hover {
+.save:hover {
     filter: invert(37%) sepia(78%) saturate(463%) hue-rotate(6deg) brightness(99%) contrast(85%);
 }
 

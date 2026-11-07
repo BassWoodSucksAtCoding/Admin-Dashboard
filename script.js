@@ -21,6 +21,11 @@ function addBookToLibrary(name, description, author, pageno) {
 function displayBook(book) {
     const clonedCard = card.cloneNode(true);
     clonedCard.id = null;
+    clonedCard.dataset.bookID = book.id
+
+    const deleteButton = clonedCard.querySelector('.delete')
+    deleteButton.dataset.buttonID = book.id
+
     cardDiv.appendChild(clonedCard);
 
     const title = clonedCard.querySelector('h4');
@@ -62,8 +67,16 @@ addBookToLibrary(
     "3000"
 )
 
-const save = document.querySelector('#save'); 
+const deleteButton = document.querySelectorAll('.delete'); 
+console.log(deleteButton)
 
-save.addEventListener('click', event => { 
-  save.src = 'Images/trash-can-outline.svg'; 
-});
+for (const button of deleteButton) {
+    button.addEventListener('click', event => {
+        const clickedButton = event.currentTarget
+        console.log("hi")
+        const bookList = document.querySelector(`[data-book-i-d = "${clickedButton.dataset.buttonID}"]`);
+        console.log("hi")
+        console.log(bookList)
+        bookList.remove();
+    })
+}
