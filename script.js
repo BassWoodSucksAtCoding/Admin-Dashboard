@@ -19,6 +19,7 @@ function addBookToLibrary(name, description, author, pageno) {
 }
 
 function displayBook(book) {
+    
     const clonedCard = card.cloneNode(true);
     clonedCard.id = null;
     clonedCard.dataset.bookID = book.id
